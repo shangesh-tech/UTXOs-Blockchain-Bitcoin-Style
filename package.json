@@ -1,0 +1,20 @@
+{
+  "name": "utxos-blockchain-bitcoin-style",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/shangesh-tech/UTXOs-Blockchain-Bitcoin-Style#readme",
+  "bugs": {
+    "url": "https://github.com/shangesh-tech/UTXOs-Blockchain-Bitcoin-Style/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shangesh-tech/UTXOs-Blockchain-Bitcoin-Style.git"
+  },
+  "license": "MIT",
+  "author": "shangesh-tech",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
