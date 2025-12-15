@@ -1,5 +1,5 @@
 const { sha256 } = require("../crypto/hash");
-const { verify } = require("../crypto/sign");
+const { verify, sign } = require("../crypto/sign");
 
 class Transaction {
     constructor(inputs, outputs) {
@@ -10,13 +10,15 @@ class Transaction {
     }
 
     sign(privateKey) {
-        const { sign } = require("../crypto/sign");
         this.signature = sign(this.id, privateKey);
     }
 
     isValid() {
-        if (this.inputs.length === 0) return true; // coinbase
-        return this.inputs.every((utxo) => verify(this.id, this.signature, utxo.owner));
+        if (this.inputs.length === 0) {
+            return true; // coinbase
+        } else {
+            return this.inputs.every((utxo) => verify(this.id, this.signature, utxo.owner));
+        }
     }
 }
 
